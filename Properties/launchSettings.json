@@ -13,7 +13,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "api/customer",
+      "launchUrl": "api/introgami",
       "applicationUrl": "https://localhost:7016;http://localhost:5016",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -22,7 +22,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "api/introgami",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

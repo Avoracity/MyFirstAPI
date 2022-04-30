@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MyFirstAPI.Models;
+using IntrogamiAPI.Models;
 
-namespace MyFirstAPI.Controllers
+namespace IntrogamiAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private readonly MyFirstAPIDBContext _context;
+        private readonly IntrogamiAPIDBContext _context;
 
-        public CustomersController(MyFirstAPIDBContext context)
+        public CustomersController(IntrogamiAPIDBContext context)
         {
             _context = context;
         }

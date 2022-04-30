@@ -6,31 +6,31 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MyFirstAPI.Models;
+using IntrogamiAPI.Models;
 
-namespace MyFirstAPI.Controllers
+namespace IntrogamiAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class EmailsController : ControllerBase
     {
-        private readonly MyFirstAPIDBContext _context;
+        private readonly IntrogamiAPIDBContext _context;
 
-        public EmailsController(MyFirstAPIDBContext context)
+        public EmailsController(IntrogamiAPIDBContext context)
         {
             _context = context;
         }
 
         // GET: api/Emails
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Email>>> GetEmails()
+        public async Task<ActionResult<IEnumerable<Following>>> GetEmails()
         {
             return await _context.Emails.ToListAsync();
         }
 
         // GET: api/Emails/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Email>> GetEmail(int id)
+        public async Task<ActionResult<Following>> GetEmail(int id)
         {
             var email = await _context.Emails.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace MyFirstAPI.Controllers
         // PUT: api/Emails/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEmail(int id, Email email)
+        public async Task<IActionResult> PutEmail(int id, Following email)
         {
             if (id != email.EmailId)
             {
@@ -76,7 +76,7 @@ namespace MyFirstAPI.Controllers
         // POST: api/Emails
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Email>> PostEmail(Email email)
+        public async Task<ActionResult<Following>> PostEmail(Following email)
         {
             _context.Emails.Add(email);
             await _context.SaveChangesAsync();

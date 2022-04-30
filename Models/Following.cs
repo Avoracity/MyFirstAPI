@@ -1,6 +1,6 @@
-﻿namespace MyFirstAPI.Models
+﻿namespace IntrogamiAPI.Models
 {
-    public class Email
+    public class Following
     {
         public int EmailId { get; set; }
         public string? EmailAddress { get; set; }

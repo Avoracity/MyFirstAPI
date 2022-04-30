@@ -1,4 +1,4 @@
-namespace MyFirstAPI
+namespace IntrogamiAPI
 {
     public class WeatherForecast
     {
