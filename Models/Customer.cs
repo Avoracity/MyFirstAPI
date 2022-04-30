@@ -1,11 +1,11 @@
-﻿namespace IntrogamiAPI.Models
+﻿namespace MyFirstAPI.Models
 {
-    public class User
+    public class Customer
     {
-        public int UserId { get; set; }
+        public int CustomerId { get; set; }
         public string? FirstName { get; set; }
         public string? MiddleName { get; set; }
         public string? LastName { get; set; }
-        public Following? Email { get; set; }
+        public Email? Email { get; set; }
     }
 }
