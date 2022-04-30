@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using MyFirstAPI.Models;
+using IntrogamiAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddDbContext<MyFirstAPIDBContext>();
+builder.Services.AddDbContext<IntrogamiAPIDBContext>();
 
 var app = builder.Build();
 

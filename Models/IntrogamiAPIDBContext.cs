@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
-using MyFirstAPI.Models;
+using IntrogamiAPI.Models;
 
-namespace MyFirstAPI.Models
+namespace IntrogamiAPI.Models
 {
-    public class MyFirstAPIDBContext : DbContext
+    public class IntrogamiAPIDBContext : DbContext
     {
         protected readonly IConfiguration Configuration;
 
-        public MyFirstAPIDBContext(DbContextOptions<MyFirstAPIDBContext> options, IConfiguration configuration)
+        public IntrogamiAPIDBContext(DbContextOptions<IntrogamiAPIDBContext> options, IConfiguration configuration)
             : base(options)
         {
             Configuration = configuration;
@@ -16,11 +16,11 @@ namespace MyFirstAPI.Models
         
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            var connectionString = Configuration.GetConnectionString("CustomerDataService");
+            var connectionString = Configuration.GetConnectionString("IntrogamiService");
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }
 
         public DbSet<Customer> Customers { get; set; } = null!;
-        public DbSet<Email> Emails { get; set; } = null!;
+        public DbSet<Following> Emails { get; set; } = null!;
     }
 }
